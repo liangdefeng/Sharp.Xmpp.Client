@@ -12,7 +12,9 @@ of XMPP extensions.
 
 
 ### NuGet
+
 Install-Package Portable.BouncyCastle -Version 1.8.10
+
 Install-Package ARSoft.Tools.NetStandard.DXSdata -Version 1.0.0
 
 ### Supported XMPP Features

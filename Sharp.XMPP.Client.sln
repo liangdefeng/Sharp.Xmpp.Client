@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shar.XMPP.Client", "XMPPClient\Shar.XMPP.Client.csproj", "{CBD1703B-65D0-4A7D-BC98-0BD87EA8230C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shar.XMPP.Client", "XMPPClient\Shar.XMPP.Client.csproj", "{CBD1703B-65D0-4A7D-BC98-0BD87EA8230C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{90A6F640-F824-4AF8-A03D-6BE05321CA74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CBD1703B-65D0-4A7D-BC98-0BD87EA8230C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD1703B-65D0-4A7D-BC98-0BD87EA8230C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD1703B-65D0-4A7D-BC98-0BD87EA8230C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A6F640-F824-4AF8-A03D-6BE05321CA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A6F640-F824-4AF8-A03D-6BE05321CA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A6F640-F824-4AF8-A03D-6BE05321CA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A6F640-F824-4AF8-A03D-6BE05321CA74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
