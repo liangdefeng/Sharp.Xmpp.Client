@@ -11,6 +11,10 @@ an XMPP server. It supports basic Instant Messaging and Presence funtionality as
 of XMPP extensions.
 
 
+### NuGet
+Install-Package Portable.BouncyCastle -Version 1.8.10
+Install-Package ARSoft.Tools.NetStandard.DXSdata -Version 1.0.0
+
 ### Supported XMPP Features
 
 The library fully implements the [XMPP Core](http://xmpp.org/rfcs/rfc3920.html) and 
@@ -55,17 +59,17 @@ server:
 
 ### Credits
 
-The 
+The Shar.Xmpp.Client library is copyright © 2021 Peter Liang
 The Sharp.Xmpp library is copyright © 2015 Panagiotis Georgiou Stathopoulos.
 The initial S22.Xmpp library is copyright © 2013-2014 Torben Könke.
 
 
 ### License
 
-This library is released under the [MIT license](https://github.com/pgstath/Sharp.Xmpp/blob/master/License.md).
+This library is released under the [MIT license](https://github.com/liangdefeng/Sharp.Xmpp.Client/blob/master/XMPPClient/License.md).
 
 
 ### Bug reports
 
-Please send your bug reports to [pgstath@gmail.com](mailto:pgstath@gmail.com) or create a new
+Please send your bug reports to [defeng.liang.cn@gmail.com](mailto:defeng.liang.cn@gmail.com) or create a new
 issue on the GitHub project homepage.
