@@ -1,0 +1,10 @@
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.Properties.Resources.resources
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.csproj.GenerateResource.cache
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.AssemblyInfoInputs.cache
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.AssemblyInfo.cs
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.csproj.CoreCompileInputs.cache
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.0\Shar.XMPP.Client.deps.json
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.0\Shar.XMPP.Client.dll
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.0\Shar.XMPP.Client.pdb
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.dll
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.0\Shar.XMPP.Client.pdb

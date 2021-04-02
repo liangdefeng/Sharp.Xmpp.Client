@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "XMPPClient/1.0.0": {
+        "dependencies": {
+          "ARSoft.Tools.NetStandard.DXSdata": "1.0.0",
+          "Portable.BouncyCastle": "1.8.10"
+        },
+        "runtime": {
+          "XMPPClient.dll": {}
+        }
+      },
+      "ARSoft.Tools.NetStandard.DXSdata/1.0.0": {
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.10"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ARSoft.Tools.NetStandard.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.10": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.10.0",
+            "fileVersion": "1.8.10.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XMPPClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ARSoft.Tools.NetStandard.DXSdata/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tQELhszQvPQa1ZxCYyftedDiL4sTxBYS1MEnJKmB2Yt54yZ3KdBY9alfdawls7e6hAieWz7trw2irdBjAGwRZQ==",
+      "path": "arsoft.tools.netstandard.dxsdata/1.0.0",
+      "hashPath": "arsoft.tools.netstandard.dxsdata.1.0.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XLhjNAwuVB9ynwn11l5K44eyozh8q6gFseTrlnLNttejimglX7+F9+vxh60LPjvA/DAt6fUdS43N3ah8K6eaWg==",
+      "path": "portable.bouncycastle/1.8.10",
+      "hashPath": "portable.bouncycastle.1.8.10.nupkg.sha512"
+    }
+  }
+}

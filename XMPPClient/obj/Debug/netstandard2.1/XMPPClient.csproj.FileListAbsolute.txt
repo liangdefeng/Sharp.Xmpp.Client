@@ -1,0 +1,10 @@
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.1\XMPPClient.deps.json
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.1\XMPPClient.dll
+D:\git\XMPPClient\XMPPClient\bin\Debug\netstandard2.1\XMPPClient.pdb
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.Properties.Resources.resources
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.csproj.GenerateResource.cache
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.AssemblyInfoInputs.cache
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.AssemblyInfo.cs
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.csproj.CoreCompileInputs.cache
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.dll
+D:\git\XMPPClient\XMPPClient\obj\Debug\netstandard2.1\XMPPClient.pdb

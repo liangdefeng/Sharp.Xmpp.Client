@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "6E8ZL4JVEn6u9PqK0KFpbytCFqhH1UC+pojm/hI8lXbykHQI5wjiwZ+07t7eOfbmeD4vJZ/Gz9ICVitdmDpk3g==",
+  "success": true,
+  "projectFilePath": "D:\\git\\XMPPClient\\XMPPClient\\Shar.XMPP.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\defen\\.nuget\\packages\\arsoft.tools.netstandard.dxsdata\\1.0.0\\arsoft.tools.netstandard.dxsdata.1.0.0.nupkg.sha512",
+    "C:\\Users\\defen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\defen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\defen\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512"
+  ],
+  "logs": []
+}
