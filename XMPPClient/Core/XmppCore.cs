@@ -915,7 +915,11 @@ namespace Sharp.Xmpp.Core
         {
             // Request the initial stream.
             XmlElement feats = InitiateStream(Hostname);
-            Console.WriteLine("Received:" + feats.ToXmlString());
+            if (debugStanzas)
+            {
+                // Console.WriteLine("Received:" + feats.ToXmlString());
+                System.Diagnostics.Debug.WriteLine("Received:\n" + feats.ToXmlString());
+            }
 
             // Server supports TLS/SSL via STARTTLS.
             if (feats["starttls"] != null)
@@ -946,7 +950,11 @@ namespace Sharp.Xmpp.Core
             try
             {
                 feats = Authenticate(list, Username, Password, Hostname);
-                Console.WriteLine("Received:" + feats.ToXmlString());
+                if (debugStanzas)
+                {
+                    // Console.WriteLine("Received:" + feats.ToXmlString());
+                    System.Diagnostics.Debug.WriteLine("Received:\n" + feats.ToXmlString());
+                }
 
                 // FIXME: How is the client's JID constructed if the server does not support
                 // resource binding?
@@ -1056,7 +1064,12 @@ namespace Sharp.Xmpp.Core
             while (true)
             {
                 XmlElement ret = parser.NextElement("challenge", "success", "failure");
-                Console.WriteLine("Received:" + ret.ToXmlString());
+
+                if (debugStanzas)
+                {
+                    // Console.WriteLine("Received:" + ret.ToXmlString());
+                    System.Diagnostics.Debug.WriteLine("Received:\n" + ret.ToXmlString());
+                }
 
                 if (ret.Name == "failure")
                     throw new SaslException("SASL authentication failed.");
@@ -1169,11 +1182,12 @@ namespace Sharp.Xmpp.Core
                 try
                 {
                     stream.Write(buf, 0, buf.Length);
-                    Console.WriteLine("Sent:" + xml);
+                    
 
                     if (debugStanzas)
-                    {                        
-                        System.Diagnostics.Debug.WriteLine(xml);
+                    {
+                        // Console.WriteLine("Sent:" + xml);
+                        System.Diagnostics.Debug.WriteLine("Sent:\n" + xml);
                     }
                 }
                 catch (IOException e)
@@ -1218,8 +1232,14 @@ namespace Sharp.Xmpp.Core
             Send(element);
             try
             {
-                XmlElement retElement = parser.NextElement(expected);                
-                Console.WriteLine("Received:" + retElement.ToXmlString());                
+                XmlElement retElement = parser.NextElement(expected);
+
+                if (debugStanzas)
+                {
+                    // Console.WriteLine("Received:" + retElement.ToXmlString());
+                    System.Diagnostics.Debug.WriteLine("Received:\n" + retElement.ToXmlString());
+                }
+                                  
                 return retElement;
             }
             catch (XmppDisconnectionException e)
@@ -1241,7 +1261,11 @@ namespace Sharp.Xmpp.Core
                 while (true)
                 {
                     XmlElement elem = parser.NextElement("iq", "message", "presence");
-                    Console.WriteLine("Received:" + elem.ToXmlString());
+                    if (debugStanzas)
+                    {
+                        // Console.WriteLine("Received:" + elem.ToXmlString());
+                        System.Diagnostics.Debug.WriteLine("Received:\n" + elem.ToXmlString());
+                    }
 
                     // Parse element and dispatch.
                     switch (elem.Name)
@@ -1298,10 +1322,11 @@ namespace Sharp.Xmpp.Core
                 try
                 {
                     Stanza stanza = stanzaQueue.Take(cancelDispatch.Token);
-                    Console.WriteLine("Received:" + stanza.ToString());
+                    
                     if (debugStanzas)
-                    {                        
-                        System.Diagnostics.Debug.WriteLine(stanza.ToString());
+                    {
+                        // Console.WriteLine("Received:" + stanza.ToString());
+                        System.Diagnostics.Debug.WriteLine("Received:\n" + stanza.ToString());
                     }
                     if (stanza is Iq)
                         Iq.Raise(this, new IqEventArgs(stanza as Iq));
