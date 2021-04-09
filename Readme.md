@@ -47,14 +47,11 @@ server:
 	using Sharp.Xmpp;
 	using Sharp.Xmpp.Client;
 
-	namespace Test 
-    {
+	namespace Test {
 
-		class Program 
-        {
+		class Program {
 
-			static void Main(string[] args) 
-            {
+			static void Main(string[] args) {
 
                 /* connect on port 5222 using TLS/SSL if available */
                 using (var client = new XmppClient("localhost", "user1", "12345678"))
@@ -76,8 +73,8 @@ server:
                     Console.WriteLine("Connected as " + client.Jid);
                 }
             }
-		}
-	}
+        }
+    }
 
 ### Credits
 
