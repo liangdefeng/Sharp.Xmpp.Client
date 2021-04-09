@@ -47,28 +47,34 @@ server:
 	using Sharp.Xmpp;
 	using Sharp.Xmpp.Client;
 
-	namespace Test {
-		class Program {
-			static void Main(string[] args) {
+	namespace Test 
+    {
 
-            /* connect on port 5222 using TLS/SSL if available */
-            using (var client = new XmppClient("localhost", "user1", "12345678"))
+		class Program 
+        {
+
+			static void Main(string[] args) 
             {
-                // enabled debug stanza output.
-                client.DebugStanzas = true;
 
-                // connect to xmpp server.
-                client.Connect();
+                /* connect on port 5222 using TLS/SSL if available */
+                using (var client = new XmppClient("localhost", "user1", "12345678"))
+                {
+                    // enabled debug stanza output.
+                    client.DebugStanzas = true;
 
-                // list all the supported features 
-                Console.WriteLine("user1's XMPP client supports: ");
-                foreach (var feat in client.GetFeatures(client.Jid))
-                { 
-                    Console.WriteLine(" - " + feat);
+                    // connect to xmpp server.
+                    client.Connect();
+
+                    // list all the supported features 
+                    Console.WriteLine("user1's XMPP client supports: ");
+                    foreach (var feat in client.GetFeatures(client.Jid))
+                    { 
+                        Console.WriteLine(" - " + feat);
+                    }
+
+                    // output full jid.
+                    Console.WriteLine("Connected as " + client.Jid);
                 }
-
-                // output full jid.
-                Console.WriteLine("Connected as " + client.Jid);
             }
 		}
 	}
