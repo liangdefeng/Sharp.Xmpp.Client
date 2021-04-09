@@ -3,3 +3,6 @@
 ################################################################################
 
 /Sharp.XMPP.Test/bin/Debug/netcoreapp3.1
+/Sharp.XMPP.Test/obj
+/Test/bin/Debug/netstandard2.1
+/Test/obj

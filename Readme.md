@@ -50,19 +50,35 @@ server:
 	namespace Test {
 		class Program {
 			static void Main(string[] args) {
-				/* connect on port 5222 using TLS/SSL if available */
-				using (var client = new XmppClient("jabber.se", "username", "password"))
-				{
-					Console.WriteLine("Connected as " + client.Jid);
-				}
-			}
+
+            /* connect on port 5222 using TLS/SSL if available */
+            using (var client = new XmppClient("localhost", "user1", "12345678"))
+            {
+                // enabled debug stanza output.
+                client.DebugStanzas = true;
+
+                // connect to xmpp server.
+                client.Connect();
+
+                // list all the supported features 
+                Console.WriteLine("user1's XMPP client supports: ");
+                foreach (var feat in client.GetFeatures(client.Jid))
+                { 
+                    Console.WriteLine(" - " + feat);
+                }
+
+                // output full jid.
+                Console.WriteLine("Connected as " + client.Jid);
+            }
 		}
 	}
 
 ### Credits
 
 The Shar.Xmpp.Client library is copyright © 2021 Peter Liang
+
 The Sharp.Xmpp library is copyright © 2015 Panagiotis Georgiou Stathopoulos.
+
 The initial S22.Xmpp library is copyright © 2013-2014 Torben Könke.
 
 
