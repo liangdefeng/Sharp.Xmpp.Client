@@ -82,15 +82,15 @@ namespace Sharp.Xmpp.Extensions
         /// unspecified XMPP error occurred.</exception>
         public TimeSpan PingServer()
         {
-            if (!ecapa.Supports(jid, Extension.Ping))
+            if (!ecapa.Supports(im.Hostname, Extension.Ping))
             {
-                throw new NotSupportedException("The XMPP entity does not support the " +
+                throw new NotSupportedException("The XMPP Server does not support the " +
                     "'Ping' extension.");
             }
 
             DateTime start = DateTime.Now;
 
-            Iq iq = im.IqRequest(IqType.Get, jid, im.Hostname, Xml.Element("ping", "urn:xmpp:ping"));
+            Iq iq = im.IqRequest(IqType.Get, im.Hostname, null, Xml.Element("ping", "urn:xmpp:ping"));
 
             if (iq.Type == IqType.Error)
                 throw Util.ExceptionFromError(iq, "Could not ping XMPP Server.");
