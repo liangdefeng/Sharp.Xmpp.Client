@@ -1563,6 +1563,32 @@ namespace Sharp.Xmpp.Client
         }
 
         /// <summary>
+        /// Pings XMPP Server
+        /// </summary>
+        /// <returns>The time it took to ping the XMPP server.
+        /// JID.</returns>
+        /// <exception cref="InvalidOperationException">The XmppClient instance is
+        /// not connected to a remote host.</exception>
+        /// <exception cref="System.IO.IOException">There was a failure while writing to or
+        /// reading from the network.</exception>
+        /// <exception cref="NotSupportedException">The XMPP Server does not support the 'Ping' XMPP protocol
+        /// extension.</exception>
+        /// <exception cref="ObjectDisposedException">The XmppClient object
+        /// has been disposed.</exception>
+        /// <exception cref="XmppErrorException">The server or the XMPP client of
+        /// the user with the specified JID returned an XMPP error code. Use the
+        /// Error property of the XmppErrorException to obtain the specific error
+        /// condition.</exception>
+        /// <exception cref="XmppException">The server returned invalid data or another
+        /// unspecified XMPP error occurred.</exception>
+        public TimeSpan Ping()
+        {
+            AssertValid();
+            return ping.PingServer();
+        }
+
+
+        /// <summary>
         /// Pings the user with the specified JID.
         /// </summary>
         /// <param name="jid">The JID of the user to ping.</param>

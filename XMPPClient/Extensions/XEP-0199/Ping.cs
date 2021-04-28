@@ -68,6 +68,37 @@ namespace Sharp.Xmpp.Extensions
         }
 
         /// <summary>
+        /// Pings the XMPP server.        
+        /// </summary>
+        /// <returns>
+        /// The time it took to ping the XMPP Server
+        /// </returns>
+        /// <exception cref="NotSupportedException">The XMPP Server with
+        /// does not support the 'Ping' XMPP extension.</exception>
+        /// <exception cref="XmppErrorException">The server returned an XMPP error code.
+        /// Use the Error property of the XmppErrorException to obtain the specific
+        /// error condition.</exception>
+        /// <exception cref="XmppException">The server returned invalid data or another
+        /// unspecified XMPP error occurred.</exception>
+        public TimeSpan PingServer()
+        {
+            if (!ecapa.Supports(jid, Extension.Ping))
+            {
+                throw new NotSupportedException("The XMPP entity does not support the " +
+                    "'Ping' extension.");
+            }
+
+            DateTime start = DateTime.Now;
+
+            Iq iq = im.IqRequest(IqType.Get, jid, im.Hostname, Xml.Element("ping", "urn:xmpp:ping"));
+
+            if (iq.Type == IqType.Error)
+                throw Util.ExceptionFromError(iq, "Could not ping XMPP Server.");
+            return DateTime.Now.Subtract(start);
+        }
+
+
+        /// <summary>
         /// Pings the XMPP entity with the specified JID.
         /// </summary>
         /// <param name="jid">The JID of the XMPP entity to ping.</param>
